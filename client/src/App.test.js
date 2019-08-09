@@ -11,27 +11,28 @@ it('renders without crashing', () => {
   );
 });
 
-describe('<App />', () => {
+it('main tests',() => {
+
   const wrapper = rtl.render(
     <App/>
   );
 
-  it('main tests',() => {
+
     
-    // Get form elements by their label text
-    const Username = wrapper.getByLabelText(container, 'Username')
-    expect(Username).toBeTruthy();
-    expect(Username).tobeVisible();
+  // Get form elements by their label text
+  const Username = wrapper.queryAllByText(/Username/i)
+  expect(Username).toBeTruthy();
+  expect(Username).tobeVisible();
 
-    const Password = wrapper.getByLabelText(container, 'Password')
-    expect(Password).toBeTruthy();
-    expect(Password).tobeVisible();
+  const Password = wrapper.queryAllByText(/Password/i)
+  expect(Password).toBeTruthy();
+  expect(Password).tobeVisible();
 
-    // check button firing
-    const click = {button}
-    fireEvent.click(getByText('Submit!')).click()
+  // check button firing
+  const click = {button}
+  fireEvent.click(getByText('Submit!')).click()
 
-  })
+  
 
   
 
