@@ -24,15 +24,25 @@ In the challenge for this Sprint, you will demonstrate proficiency by creating a
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
-- [ ] What are the required parts of class components?
+- [x] What are the required parts of class components?
 
-- [ ] Name at least three lifecycle methods?
+    The required parts of class components are `extends React.Component`, `constructr()`, `super()`, `this.state` if being used, and  `render()`.
 
-- [ ] Why are forms used so often in web applications and software?
+- [x] Name at least three lifecycle methods?
 
-- [ ] What advantages are there by using a forms library like Formik?
+    Three main lifecyle methods are `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`.
 
-- [ ] Why do we write tests for our apps?
+- [x] Why are forms used so often in web applications and software?
+
+    Forms are so commonly used because they are a way to add/store data with a database, especially large quantities of data that need to be acessed later. The also alow the engineer to easily edit, display and otherwise maniupate their desired data.
+
+- [x] What advantages are there by using a forms library like Formik?
+
+    Libraries such as Formik allow for the data of the form to be easily handled. They take care of nested form data and arrays, validation, error messages, and state. Some libraries, like Formik, work well with other libraries that have validation and other tools.
+
+- [x] Why do we write tests for our apps?
+    
+    Tests are written for our apps because they minimize bugs otherwise not caught. They make programmer think about edge cases, encourage better code, prevent stagnation/regression and are a saftey when refactoring code. They are also automated, which makes them scalable and RESTful, in a way. 
 
 ## Project Set Up
 
@@ -62,7 +72,7 @@ Your finished project must include all of the following requirements:
 - [x] A registration form built with formik - include inputs for a `username` and a `password`
 - [x] Form validation using Yup
 - [x] At least one class component (I would challenge you to make the form a class!)
-- [ ] Tests for at least one element, one event, and one unit test for a function
+- [x] Tests for at least one element, one event, and one unit test for a function
 - [x] A POST request made from the registration form to `http://localhost:5000/api/register` to add a user - the request body should have the following shape:
 
 ```js
