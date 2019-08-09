@@ -37,3 +37,11 @@ it('main tests',() => {
   
 
 })
+
+fireEvent(
+  getByText(container, 'Submit!'),
+  new MouseEvent('click', {
+    bubbles: true,
+    cancelable: true,
+  })
+)
