@@ -1,12 +1,13 @@
 import React from 'react';
-import axios from 'axios'
 import './App.css';
 import Onboard from './Components/LoginForm';
+import GetFoods from './Components/GetFoods'
 
 function App() {
   return (
     <div className="App">
      <Onboard/>
+     <GetFoods/>
     </div>
   );
 }

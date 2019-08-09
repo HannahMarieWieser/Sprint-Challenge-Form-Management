@@ -7,7 +7,6 @@ import * as Yup from 'yup';
 // - [x] A registration form built with formik -
     // include inputs for a `username` and a `password`
 // - [x] Form validation using Yup
-// - [ ] At least one class component (I would challenge you to make the form a class!)
 // - [x] A POST request made from the registration form to `http://localhost:5000/api/register` to add a user - the request body should have the following shape:
 /*
 ```js
@@ -37,18 +36,21 @@ const LoginForm = ({values, errors, handleSubmit, touched, status})=>{
     }, [status]);
 
     return(
-        <Form>
-            <div>
-                {touched.username && errors.username && <p>{errors.username}</p>}
-                <Field type = 'text' name='username' placeholder= 'Username'/>
-            </div>
+        <>
+            <h1 className='title' >Log In</h1>
+            <Form>
+                <div>
+                    {touched.username && errors.username && <p>{errors.username}</p>}
+                    <Field type = 'text' name='username' placeholder= 'Username'/>
+                </div>
 
-            <div>
-                {touched.password && errors.password && <p>{errors.password}</p>}
-                <Field type = 'password' name='password' placeholder= 'Password'/>
-            </div>
-            <button type= 'submit'>Submit!</button>
-        </Form>
+                <div>
+                    {touched.password && errors.password && <p>{errors.password}</p>}
+                    <Field type = 'password' name='password' placeholder= 'Password'/>
+                </div>
+                <button type= 'submit'>Submit!</button>
+            </Form>
+        </>
     )
 }
 
@@ -74,7 +76,7 @@ const Onboard = withFormik({
 
 
     handleSubmit(values, {resetForm, setErrors, setSubmitting, setStatus}){
-        console.log(values)
+        console.log('values', values)
         
         axios
         .post('http://localhost:5000/api/register', values)
